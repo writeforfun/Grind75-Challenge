@@ -6,7 +6,6 @@ Author: Yuan
 Date: 2022/06/18
 '''
 
-
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         
