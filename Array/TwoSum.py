@@ -5,8 +5,8 @@ Link: https://leetcode.com/problems/two-sum/
 Author: Yuan
 Date: 2022/06/18
 '''
-
-class SolutionHashTable:
+# HashTable
+class Solution1:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         #apply hash table
         hash_table = {}
@@ -15,8 +15,8 @@ class SolutionHashTable:
                 return [hash_table[target - n], i]
             hash_table[n] = i
 
-
-class SolutionBrute:
+# Brute
+class Solution:
     def twoSum(self, nums, target):
         ans = 0
         for index_of_num1 in range(0, len(nums)):
