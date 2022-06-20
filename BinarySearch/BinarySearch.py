@@ -12,7 +12,7 @@ class Solution:
         right_index = len(nums) - 1
         
         while left_index <= right_index:
-            midpoint = left_index + (right_index - left_index) //2
+            midpoint = left_index + (right_index - left_index) // 2
             if target == nums[midpoint]:
                 return midpoint
             elif target < nums[midpoint]:
