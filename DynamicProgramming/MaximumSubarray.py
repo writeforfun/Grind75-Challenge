@@ -6,7 +6,6 @@ Author: Yuan
 Date: 2022/06/26
 '''
 
-
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         
