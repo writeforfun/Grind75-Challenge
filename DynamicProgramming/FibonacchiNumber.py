@@ -7,7 +7,6 @@ Date: 2022/06/27
 Note: Not in Grind 75
 '''
 
-
 # dp with list
 class Solution1:
     def fib(self, n: int) -> int:
@@ -40,4 +39,21 @@ class Solution3:
         
         return self.fib(n-1) + self.fib(n-2)
 
-
+class Solution4:
+    def fib(self, n: int) -> int:
+        
+        if n == 0:
+            return n
+        
+        if n == 1 or n == 2:
+            return 1
+        
+        prev1 = 1
+        prev2 = 1
+        current = 0
+        for i in range(3, n+1):
+            current = prev1 + prev2
+            prev1 = prev2
+            prev2 = current
+            
+        return current
