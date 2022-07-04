@@ -1,6 +1,6 @@
 '''
 Title: 56. Merge Intervals
-Level: Medium?
+Level: Medium
 Link: https://leetcode.com/problems/merge-intervals/submissions/
 Author: Yuan
 Date: 2022/07/04
