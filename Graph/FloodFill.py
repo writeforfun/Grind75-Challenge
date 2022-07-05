@@ -6,6 +6,7 @@ Author: Yuan
 Date: 2022/07/05
 '''
 
+# dfs
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
         
@@ -28,11 +29,3 @@ class Solution:
         fill(sr, sc)
         
         return image
-        
-    
-    
-    
-    
-    
-        
-        
