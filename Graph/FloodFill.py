@@ -36,6 +36,31 @@ class Solution2:
         if image == None or image[sr][sc] == color:
             return image
         
+        height = len(image)
+        width = len(image[0])
+        current_color = image[sr][sc] 
+        
+        def fill (sr, sc):
+            if sr < 0 or sr >= height or sc < 0 or sc >= width or image[sr][sc] != current_color:
+                return
+            
+            image[sr][sc] = color
+            fill(sr+1, sc)
+            fill(sr-1, sc)
+            fill(sr, sc+1)
+            fill(sr, sc-1)      
+        
+        fill(sr, sc)
+        
+        return image
+
+
+class Solution3:
+    def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+        
+        if image == None or image[sr][sc] == color:
+            return image
+        
         self.fill(sr, sc, image, image[sr][sc], color)
         
         return image
