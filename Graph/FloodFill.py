@@ -10,7 +10,7 @@ Date: 2022/07/05
 class Solution1:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
         
-        if image[sr][sc] == color:
+        if image == None or image[sr][sc] == color:
             return image
         
         height = len(image)
