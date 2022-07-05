@@ -54,7 +54,6 @@ class Solution2:
         
         return image
 
-
 class Solution3:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
         
