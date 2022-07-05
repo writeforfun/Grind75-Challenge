@@ -7,7 +7,7 @@ Date: 2022/07/05
 '''
 
 # dfs
-class Solution:
+class Solution1:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
         
         if image[sr][sc] == color:
@@ -29,3 +29,23 @@ class Solution:
         fill(sr, sc)
         
         return image
+
+class Solution2:
+    def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+        
+        if image == None or image[sr][sc] == color:
+            return image
+        
+        self.fill(sr, sc, image, image[sr][sc], color)
+        
+        return image
+        
+    def fill (self, sr, sc, image, current_color, color):
+        if sr < 0 or sr >= len(image) or sc < 0 or sc >= len(image[0]) or image[sr][sc] != current_color:
+            return
+
+        image[sr][sc] = color
+        self.fill(sr+1, sc, image, current_color, color)
+        self.fill(sr-1, sc, image, current_color, color)
+        self.fill(sr, sc+1, image, current_color, color)
+        self.fill(sr, sc-1, image, current_color, color)              
